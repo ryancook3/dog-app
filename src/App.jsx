@@ -7,9 +7,12 @@ import Register from './components/Register';
 import MemoryUpload from './components/MemoryUpload';
 import Browse from './components/Browse';
 import Community from './components/Community';
+import Navbar from './components/NavBar';
 
 function App() {
   return (
+    <div>
+    <Navbar />
     <Routes>
       <Route path="/" element={<Navigate to="/home" />} />
       <Route path="/home" element={<Home />} />
@@ -20,6 +23,7 @@ function App() {
       <Route path="/browse" element={<Browse />} />
       <Route path="/community/:breed" element={<Community />} />
     </Routes>
+    </div>
   );
 }
 
