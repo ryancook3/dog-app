@@ -1,4 +1,4 @@
-.register {
+.create-pet-profile {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -8,30 +8,30 @@
     border: 2px solid #4169E1; /* Consistent border */
   }
   
-  .register h2 {
+  .create-pet-profile h2 {
     margin-bottom: 20px;
     color: #FFFFFF; /* White */
     text-align: center;
   }
   
-  .register form {
+  .create-pet-profile form {
     display: flex;
     flex-direction: column;
   }
   
-  .register form div {
+  .create-pet-profile form div {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px; /* Increased space between input fields */
   }
   
-  .register label {
+  .create-pet-profile label {
     margin-bottom: 8px; /* Added space between label and input */
     font-weight: bold;
     color: #B0C4DE; /* Light Steel Blue */
   }
   
-  .register input {
+  .create-pet-profile input {
     padding: 10px;
     font-size: 1em;
     border: 1px solid #ddd;
@@ -41,11 +41,11 @@
     border: 2px solid #4169E1; /* Consistent border */
   }
   
-  .register input::placeholder {
+  .create-pet-profile input::placeholder {
     color: #B0C4DE; /* Light Steel Blue */
   }
   
-  .register button {
+  .create-pet-profile button {
     padding: 10px 20px;
     background-color: #4169E1; /* Royal Blue */
     color: white;
@@ -55,13 +55,7 @@
     border: 2px solid #4169E1; /* Consistent border */
   }
   
-  .register button:hover {
+  .create-pet-profile button:hover {
     background-color: #20B2AA; /* Light Sea Green */
-  }
-  
-  .error {
-    color: #ff6b6b; /* Light red */
-    font-size: 0.9em;
-    margin-top: 5px;
   }
   
