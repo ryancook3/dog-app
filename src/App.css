@@ -1,3 +1,7 @@
+.content {
+  padding-top: 60px; /* Adjust based on your navbar height */
+}
+
 /*#root {
   max-width: 1280px;
   margin: 0 auto;
