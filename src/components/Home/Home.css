@@ -1,133 +1,144 @@
 .home {
-    text-align: center;
-    color: #FFFFFF; /* White */
-    background-color: #242424; /* Dark Gray */
-    padding: 20px;
-  }
-  
-  .hero {
-    padding: 50px 20px;
-    background-image: url('../../images/background.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .hero h1 {
-    font-size: 3em;
-  }
-  
-  .hero p {
+  text-align: center;
+  color: #FFFFFF; /* White */
+  background-color: #242424; /* Dark Gray */
+  padding: 20px;
+}
+
+.featured-memories {
+  padding: 40px 20px; /* Increased padding for better spacing */
+  background-color: #333333;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.featured-memories h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #B0C4DE; /* Light Steel Blue for heading */
+}
+
+.featured-memories .intro-text {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #B0C4DE; /* Light Steel Blue */
+}
+
+.carousel-container {
+  max-width: 1200px; /* Adjust this value to fit your layout */
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.memories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted for better layout */
+  gap: 20px;
+  justify-content: center; /* Center items horizontally */
+}
+
+.memory-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+}
+
+.memory-card:hover {
+  transform: translateY(-10px); /* Hover effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hover effect */
+}
+
+.memory-card img,
+.memory-card video {
+  width: 100%;
+  height: 300px; /* Adjust this value to make the cards shorter */
+  object-fit: cover;
+  margin: 0; /* Ensure no margin causes clipping */
+}
+
+.memory-card p {
+  padding: 10px;
+  margin-top: auto; /* Push the paragraph to the bottom */
+  color: #242424; /* Dark Gray for better readability */
+}
+
+.browse-communities {
+  padding: 20px;
+  background-color: #242424; /* Dark Gray */
+  color: white;
+}
+
+.browse-button {
+  background-color: #4169E1; /* Royal Blue */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: background 0.3s, color 0.3s;
+}
+
+.browse-button:hover {
+  background-color: #20B2AA; /* Light Sea Green */
+  color: #FFFFFF; /* Ensure text color stays white */
+}
+
+.testimonials {
+  padding: 20px;
+  background-color: #333333;
+  color: white;
+}
+
+.testimonial {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .featured-memories h2 {
     font-size: 1.5em;
-    margin: 20px 0;
   }
-  
-  .cta-button {
-    background-color: #4169E1; /* Royal Blue */
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: background 0.3s, color 0.3s;
+
+  .featured-memories .intro-text {
+    font-size: 1em;
   }
-  
-  .cta-button:hover {
-    background-color: #20B2AA; /* Light Sea Green */
-    color: #FFFFFF; /* Ensure text color stays white */
-  }
-  
-  .featured-memories {
-    padding: 20px;
-    background-color: #333333;
-    color: #FFFFFF;
-  }
-  
-  .carousel-container {
-    max-width: 1700px; /* Adjust this value to make the carousel wider */
-    width: 100%; /* Ensure the container takes the full width */
-    margin: 0 auto; /* Center the carousel */
-    padding: 0 20px; /* Optional: Add some padding */
-    overflow: visible; /* Ensure no clipping */
-  }
-  
-  .intro-text {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    color: #B0C4DE; /* Light Steel Blue */
-  }
-  
-  .memories-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    justify-content: center; /* Center items horizontally */
-  }
-  
-  .memory-card {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-  }
-  
+
   .memory-card img,
   .memory-card video {
-    width: 100%;
-    height: 450px; /* Adjust this value to make the cards shorter */
-    object-fit: cover;
-    margin: 0; /* Ensure no margin causes clipping */
+    height: 200px; /* Adjust height for smaller screens */
   }
-  
-  .memory-card p {
-    padding: 10px;
-    margin-top: auto; /* Push the paragraph to the bottom */
-    color: #242424; /* Dark Gray for better readability */
+
+  .memories-grid {
+    grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    gap: 10px; /* Reduced gap for smaller screens */
   }
-  
-  .browse-communities {
-    padding: 20px;
-    background-color: #242424; /* Dark Gray */
-    color: white;
+
+  .memory-card {
+    padding: 5px; /* Reduced padding for smaller screens */
   }
-  
+
   .browse-button {
-    background-color: #4169E1; /* Royal Blue */
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: background 0.3s, color 0.3s;
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+    font-size: 1em; /* Adjust font size for smaller screens */
   }
-  
-  .browse-button:hover {
-    background-color: #20B2AA; /* Light Sea Green */
-    color: #FFFFFF; /* Ensure text color stays white */
-  }
-  
+
   .testimonials {
-    padding: 20px;
-    background-color: #333333;
-    color: white;
+    padding: 10px;
   }
-  
+
   .testimonial {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 10px;
   }
-  
-  @media (max-width: 768px) {
-    .memory-card img,
-    .memory-card video {
-      height: 200px; /* Adjust height for smaller screens */
-    }
-  }
-  
+}

@@ -1,67 +1,66 @@
 .register {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #333333; /* Dark Gray */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 2px solid #4169E1; /* Consistent border */
-  }
-  
-  .register h2 {
-    margin-bottom: 20px;
-    color: #FFFFFF; /* White */
-    text-align: center;
-  }
-  
-  .register form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .register form div {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px; /* Increased space between input fields */
-  }
-  
-  .register label {
-    margin-bottom: 8px; /* Added space between label and input */
-    font-weight: bold;
-    color: #B0C4DE; /* Light Steel Blue */
-  }
-  
-  .register input {
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #242424; /* Dark Gray */
-    color: #FFFFFF; /* White */
-    border: 2px solid #4169E1; /* Consistent border */
-  }
-  
-  .register input::placeholder {
-    color: #B0C4DE; /* Light Steel Blue */
-  }
-  
-  .register button {
-    padding: 10px 20px;
-    background-color: #4169E1; /* Royal Blue */
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    border: 2px solid #4169E1; /* Consistent border */
-  }
-  
-  .register button:hover {
-    background-color: #20B2AA; /* Light Sea Green */
-  }
-  
-  .error {
-    color: #ff6b6b; /* Light red */
-    font-size: 0.9em;
-    margin-top: 5px;
-  }
-  
+  margin-top: 60px; /* Add margin to move the form down */
+  padding: 20px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f5f5f5; /* Light background color */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register h2 {
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.register form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.register label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.register input {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.register input::placeholder {
+  color: #aaa;
+}
+
+.register button {
+  padding: 10px 20px;
+  background-color: #4169E1; /* Royal Blue */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* Add margin to create space above button */
+}
+
+.register button:hover {
+  background-color: #20B2AA; /* Light Sea Green */
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: -10px;
+}

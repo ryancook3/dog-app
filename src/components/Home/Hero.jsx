@@ -1,12 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import './Hero.css';
 
-const Hero = () => (
-  <section className="hero">
-    <h1>Welcome to Pet Memories</h1>
-    <p>Capture and cherish the precious moments with your pets.</p>
-    <Link to="/register" className="cta-button">Get Started</Link>
-  </section>
-);
+const Hero = () => {
+  return (
+    <div className="hero">
+      <div className="hero-content">
+        <h1 className="hero-title">Welcome to Pet Memories</h1>
+        <p className="hero-subtitle">Capture and cherish the precious moments with your pets.</p>
+        <a href="/register" className="cta-button">Get Started</a>
+      </div>
+      <div className="decorative-elements">
+        <div className="circle"></div>
+        <div className="triangle"></div>
+      </div>
+    </div>
+  );
+};
 
 export default Hero;

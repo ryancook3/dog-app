@@ -1,98 +1,117 @@
 .navbar {
   display: flex;
-  justify-content: center;
-  background-color: #333;
-  color: white;
-  position: fixed; /* Fix the navbar at the top */
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
-}
-
-.navbar .container {
-  display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  max-width: 1200px; /* Optional: Set a max-width for the container */
-  padding: 0 20px; /* Adjust this value to increase/decrease the spacing */
+  padding: 10px 500px; /* Default padding for larger screens */
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-logo a {
-  color: white;
-  text-decoration: none;
+.navbar-brand {
   font-size: 1.5em;
+  font-weight: bold;
 }
 
 .navbar-links {
-  list-style: none;
   display: flex;
-  gap: 15px;
-  margin: 0; /* Remove default list margin */
-  padding: 0; /* Remove default list padding */
-  overflow: hidden; /* Prevent items from being cut off */
-  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
-}
-
-.navbar-links li {
-  display: inline;
+  gap: 20px;
+  transition: max-height 0.3s ease-out;
 }
 
 .navbar-links a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: background 0.3s;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 .navbar-links a:hover {
   background-color: #555;
 }
 
-.navbar-toggle {
-  display: none; /* Hide by default */
+.navbar-auth {
+  display: flex;
+  gap: 10px;
 }
 
-/* Mobile Styles */
+.navbar-auth a,
+.navbar-auth button {
+  color: #fff;
+  background-color: #4169E1;
+  padding: 8px 16px;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-auth a:hover,
+.navbar-auth button:hover {
+  background-color: #20B2AA;
+  color: #FFFFFF; /* Ensure text color stays white */
+}
+
+.navbar-auth button {
+  background-color: #4169E1;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.navbar-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
 @media (max-width: 768px) {
-  .navbar .container {
+  .navbar {
     flex-direction: column;
     align-items: flex-start;
+    padding: 10px 20px; /* Adjusted padding for mobile */
   }
 
-  .navbar-logo {
+  .navbar-brand {
     margin-bottom: 10px;
   }
 
-  .navbar-toggle {
-    display: block; /* Show the hamburger menu on mobile */
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5em;
-    cursor: pointer;
-  }
-
   .navbar-links {
+    display: none; /* Hide by default */
     flex-direction: column;
-    gap: 10px;
     width: 100%;
-    display: none; /* Hide by default on mobile */
   }
 
   .navbar-links.open {
     display: flex; /* Show when open */
+    max-height: 500px; /* Adjust as necessary */
   }
 
-  .navbar-links li {
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-auth {
+    flex-direction: column;
+    gap: 5px;
     width: 100%;
   }
 
-  .navbar-links a {
-    display: block;
+  .navbar-links a,
+  .navbar-auth a,
+  .navbar-auth button {
+    padding: 10px 20px;
+    margin: 5px 0;
     width: 100%;
-    text-align: left;
+    text-align: center;
   }
 }
