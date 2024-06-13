@@ -78,4 +78,47 @@ button:focus-visible {
   button {
     background-color: #F0F8FF; /* Alice Blue */
   }
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .modal {
+      width: 85%;
+      padding: 20px;
+      max-width: 85%;
+      margin: 0 7.5%;
+    }
+  
+    .navbar {
+      padding: 10px 50px; /* Adjust padding for tablet */
+    }
+  
+    .container {
+      padding: 0 30px; /* Adjust padding for tablet */
+    }
+  
+    .wide-container {
+      max-width: 1200px; /* Adjust width for tablet */
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 30px; /* Adjust padding for tablet */
+      overflow: visible;
+    }
+  
+    .hero {
+      height: auto; /* Adjust height for tablet */
+      padding: 30px 20px;
+    }
+  
+    .hero-title {
+      font-size: 3em; /* Adjust font size for tablet */
+    }
+  
+    .hero-subtitle {
+      font-size: 1.2em; /* Adjust font size for tablet */
+      margin-bottom: 30px;
+    }
+  
+    .cta-button {
+      padding: 12px 25px;
+      font-size: 1.1em;
+    }
+  }
 }

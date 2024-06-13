@@ -5,10 +5,10 @@ import BrowseCommunities from './BrowseCommunities';
 import Testimonials from './Testimonials';
 import './Home.css';
 
-const Home = () => (
+const Home = ({ openModal }) => (
   <div className="home">
     <div className="container">
-      <Hero />
+      <Hero openModal={openModal} />
     </div>
     <div className="wide-container">
       <FeaturedMemories />
