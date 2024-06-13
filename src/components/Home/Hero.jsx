@@ -1,13 +1,13 @@
 import React from 'react';
 import './Hero.css';
 
-const Hero = () => {
+const Hero = ({ openModal }) => {
   return (
     <div className="hero">
       <div className="hero-content">
         <h1 className="hero-title">Welcome to Pet Memories</h1>
         <p className="hero-subtitle">Capture and cherish the precious moments with your pets.</p>
-        <a href="/register" className="cta-button">Get Started</a>
+        <button onClick={openModal} className="cta-button">Get Started</button>
       </div>
       <div className="decorative-elements">
         <div className="circle"></div>

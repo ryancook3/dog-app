@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ openModal }) => {
   const navigate = useNavigate();
   const isLoggedIn = !!localStorage.getItem('userId');
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleLogout = () => {
     localStorage.removeItem('userId');
@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
@@ -26,7 +26,7 @@ const Navbar = () => {
         <span className="bar"></span>
         <span className="bar"></span>
       </button>
-      <div className={`navbar-links ${isOpen ? 'open' : ''}`}>
+      <div className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>
         <Link to="/home">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/browse">Browse</Link>
@@ -37,7 +37,7 @@ const Navbar = () => {
         {!isLoggedIn ? (
           <>
             <Link to="/login">Login</Link>
-            <Link to="/register">Register</Link>
+            <button onClick={openModal}>Register</button>
           </>
         ) : (
           <button onClick={handleLogout}>Logout</button>
